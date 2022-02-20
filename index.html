@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Elegance</title>
+    <!--Bootstrap 4.6 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!--// Bootstrap 4.6-->
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet">
+
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/6277f98923.js" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+
+    <script src="js/mediaplayer.js"></script>
+    <script src="js/Parser.js"></script>
+    <script src="js/smoothscrool.js"></script>
+</head>
+<body>
+
+    <button onclick="upper()" id="toUp" title="Go to top">T</button>
+    <div class="container-lg">
+
+        <nav class="navbar navbar-expand-xl navbar-light">
+
+            <a href="#" class="navbar-brand navbar-dark nav__logo"><i class="fab fa-etsy"></i>LEGANCE</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+
+                            <li class="nav-item">
+                                <a href="login.html" class="nav-link">Login</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="register.html" class="nav-link">Register</a>
+                            </li>
+                            <!--
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Men</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Women</a>
+                            </li>
+                            -->
+                            <li class="nav-item">
+                                <a href="#blog" class="nav-link" id="smooth">Blog</a>
+                            </li>
+
+                    </ul>
+                </div>
+            <div id="mute-toggle"></div>
+            <audio id="audio" loop>
+                <source src="audio/beat.wav" type="audio/wav">
+            </audio>
+
+
+                    <!-- <div class="nav__cart">
+                        &lt;!&ndash; TODO: Make cart  &ndash;&gt;
+                        <a href="#" class="nav__cart-link">
+                            <span class="nav__cart-count">11</span>
+                            <img src="./img/icons/shopping-cart.svg" alt="Cart">
+                        </a>
+                    </div> -->
+        </nav>
+    </div>
+
+
+    <header class="header">
+
+        <div class="container-lg">
+
+            <div class="header__row">
+                <div class="header__content">
+                    <h1 class="header__title"> Elegance Collection</h1>
+
+                    <div class="header__text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula erat in ex euismod mollis. In aliquam augue sit amet diam finibus, id volutpat tellus tincidunt. </p>
+                    </div>
+                    <div class="header__btn">
+                        <a class="button" href="#">Shopping</a>
+                    </div>
+                </div>
+                <div class="header__photo">
+                    <img src="./img/header/header__photo.jpg" alt="Header photo">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="featured">
+            <div class="container">
+
+
+                <div class="section__header">
+                    <h2 class="section__header-title">New products</h2>
+                    <div class="section__header-desc">
+                        <p>joren menti jensu</p>
+                    </div>
+                </div>
+
+                <!-- products wrapper  -->
+
+                <div class="row align-items-start ">
+                    <!-- product -->
+                    <div class="col-3">
+                    <a class="product-link">
+                        <div class="product">
+                            <img src="./img/products/item1.jpg" alt="Product image" class="product__img">
+                            <h4 class="product__title">Dragon T-Shirt</h4>
+                            <div class="product__price">
+                                <span class="product__price-old">$59.99</span>
+                                <span class="product__price-new">$29.99</span>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                    <!-- end product -->
+                    <!-- product -->
+                    <div class="col-3 ">
+                    <a class="product-link">
+                        <div class="product">
+                            <img src="./img/products/item2.jpg" alt="Product image" class="product__img">
+                            <h4 class="product__title">Hoodie</h4>
+                            <div class="product__price">
+                                <span class="product__price-old">$69.99</span>
+                                <span class="product__price-new">$59.99</span>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                    <!-- end product -->
+                    <!-- product -->
+                    <div class="col-3">
+                    <a class="product-link">
+                        <div class="product">
+                            <img src="./img/products/item3.jpg" alt="Product image" class="product__img">
+                            <h4 class="product__title">White T-Shirt</h4>
+                            <div class="product__price">
+                                <span class="product__price-old">$59.99</span>
+                                <span class="product__price-new">$39.99</span>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                    <!-- end product -->
+                    <!-- product -->
+                    <div class="col-3">
+                    <a class="product-link">
+                        <div class="product">
+                            <img src="./img/products/item4.jpg" alt="Product image" class="product__img">
+                            <h4 class="product__title">Hoodie №2</h4>
+                            <div class="product__price">
+                                <span class="product__price-old">$59.99</span>
+                                <span class="product__price-new">$49.99</span>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                    <!-- end product -->
+                    <!-- product -->
+                </div>
+
+                <div class="row align-items-end" style="margin-top: 40px">
+                    <div class="col-3">
+                    <a class="product-link">
+                        <div class="product">
+                            <img src="./img/products/item5.jpg" alt="Product image" class="product__img">
+                            <h4 class="product__title">Hoodie №3</h4>
+                            <div class="product__price">
+                                <span class="product__price-old">$59.99</span>
+                                <span class="product__price-new">$49.99</span>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                    <!-- end product -->
+                    <!-- product -->
+                    <div class="col-3">
+                    <a class="product-link">
+                        <div class="product">
+                            <img src="./img/products/item6.jpg" alt="Product image" class="product__img">
+                            <h4 class="product__title">Sweater "Monako"</h4>
+                            <div class="product__price">
+                                <span class="product__price-old">$79.99</span>
+                                <span class="product__price-new">$59.99</span>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                    <!-- end product -->
+                    <!-- product -->
+                    <div class="col-3">
+                    <a class="product-link">
+                        <div class="product">
+                            <img src="./img/products/item7.jpg" alt="Product image" class="product__img">
+                            <h4 class="product__title">"Olympia" T-Shirts</h4>
+                            <div class="product__price">
+                                <span class="product__price-old">$49.99</span>
+                                <span class="product__price-new">$32.99</span>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                    <!-- end product -->
+                    <!-- product -->
+                    <div class="col-3">
+                    <a class="product-link">
+                        <div class="product">
+                            <img src="./img/products/item8.jpg" alt="Product image" class="product__img">
+                            <h4 class="product__title">Cotton sweater</h4>
+                            <div class="product__price">
+                                <span class="product__price-old">$49.99</span>
+                                <span class="product__price-new">$39.99</span>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                    <!-- end product -->
+                <!-- //products wrapper  -->
+                </div>
+
+                <div class="section-button-wrapper">
+                    <a href="#" class="button-outline" style="margin-top: 40px">Browse all items</a>
+                </div>
+
+            </div>
+        </section>
+
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+        </div>
+
+        <section class="info-section">
+            <div class="container">
+                <div class="info-section__row">
+                    <h2 class="info-section__title">Get Something You Love</h2>
+                    <a class="button" href="#">Shopping</a>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="featured-products">
+            <div class="section__header">
+                <h2 class="section__header-title">Featured Products</h2>
+                <div class="section__header-desc">
+                    <p>dolor sit amet</p>
+                </div>
+            </div>
+            <div class="container">
+            <div class="row align-items-start ">
+                <!-- product -->
+                <div class="col-3">
+                    <a class="product-link">
+                        <div class="product">
+                            <img src="./img/products/item1.jpg" alt="Product image" class="product__img">
+                            <h4 class="product__title">Dragon T-Shirt</h4>
+                            <div class="product__price">
+                                <span class="product__price-old">$59.99</span>
+                                <span class="product__price-new">$29.99</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- end product -->
+                <!-- product -->
+                <div class="col-3 ">
+                    <a class="product-link">
+                        <div class="product">
+                            <img src="./img/products/item2.jpg" alt="Product image" class="product__img">
+                            <h4 class="product__title">Hoodie</h4>
+                            <div class="product__price">
+                                <span class="product__price-old">$69.99</span>
+                                <span class="product__price-new">$59.99</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- end product -->
+                <!-- product -->
+                <div class="col-3">
+                    <a class="product-link">
+                        <div class="product">
+                            <img src="./img/products/item3.jpg" alt="Product image" class="product__img">
+                            <h4 class="product__title">White T-Shirt</h4>
+                            <div class="product__price">
+                                <span class="product__price-old">$59.99</span>
+                                <span class="product__price-new">$39.99</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- end product -->
+                <!-- product -->
+                <div class="col-3">
+                    <a class="product-link">
+                        <div class="product">
+                            <img src="./img/products/item4.jpg" alt="Product image" class="product__img">
+                            <h4 class="product__title">Hoodie №2</h4>
+                            <div class="product__price">
+                                <span class="product__price-old">$59.99</span>
+                                <span class="product__price-new">$49.99</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- end product -->
+                <!-- product -->
+            </div>
+            </div>
+        </section>
+
+        <section class="featured-info-section">
+            <div class="container">
+                <div class="featured-info-section__row">
+                    <h2 class="info-section__title">New Special Dream Collection</h2>
+                    <a class="button" href="#">Shop now</a>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="blog" id="blog">
+
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__header-title">Blog Posts</h2>
+                    <div class="section__header-desc">
+                        <p>Editors choice</p>
+                    </div>
+                </div>
+
+                <div class="posts-wrapper">
+
+                    <div class="post">
+                        <img src="./img/blog/Rectangle%202.jpg" alt="Post 1" class="post__img">
+                        <div class="post__content">
+                            <h4 class="post__title">First post</h4>
+                            <p class="post__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                            <a href="#" class="post__read-more">Read more <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="post">
+                        <img src="./img/blog/Rectangle%203.jpg" alt="Post 2" class="post__img">
+                        <div class="post__content">
+                            <h4 class="post__title">Second post</h4>
+                            <p class="post__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                            <a href="#" class="post__read-more">Read more <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="post">
+                        <img src="./img/blog/Rectangle%204.jpg" alt="Post 3" class="post__img">
+                        <div class="post__content">
+                            <h4 class="post__title">Third post</h4>
+                            <p class="post__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                            <a href="#" class="post__read-more">Read more <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="post">
+                        <img src="./img/blog/Rectangle%206.jpg" alt="Post 4" class="post__img">
+                        <div class="post__content">
+                            <h4 class="post__title">Fourth post</h4>
+                            <p class="post__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                            <a href="#" class="post__read-more">Read more <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="section-button-wrapper">
+                    <a href="#" class="button-outline">Read all posts</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-dark btn-floating m-1" href="#" role="button"
+                ><i class="fab fa-facebook-f"></i
+                ></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-dark btn-floating m-1" href="#" role="button"
+                ><i class="fab fa-twitter"></i
+                ></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-dark btn-floating m-1" href="#" role="button">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <!-- Pinterest -->
+                <a class="btn btn-dark m-1" href="#" role="button">
+                    <i class="fab fa-pinterest-p"></i>
+                </a>
+
+            </section>
+            <!-- Section: Social media -->
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+
+        </div>
+    </footer>
+</body>
+</html>
